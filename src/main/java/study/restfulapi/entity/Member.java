@@ -25,4 +25,8 @@ public class Member {
     public Member(String name) {
         this.name = name;
     }
+
+    public void changeMemberName(String name) {
+        this.name = name;
+    }
 }
