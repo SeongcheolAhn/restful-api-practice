@@ -3,6 +3,7 @@ package study.restfulapi.entity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import study.restfulapi.api.controller.dto.DiaryRequest;
 
 import javax.persistence.*;
 
@@ -27,5 +28,10 @@ public class Diary {
         this.contents = contents;
         this.member = member;
         member.getDiaries().add(this);
+    }
+
+    public void edit(String title, String contents) {
+        this.title = title;
+        this.contents = contents;
     }
 }
