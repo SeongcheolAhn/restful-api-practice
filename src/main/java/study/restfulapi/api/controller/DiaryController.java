@@ -49,8 +49,7 @@ public class DiaryController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/diaries")
     public Result<DiaryResponse> createDiary(@RequestBody DiaryRequest diaryRequest) throws Throwable {
-        DiaryResponse diaryResponse = diaryService.create(diaryRequest);
-        return new Result<>(diaryResponse);
+        return new Result<>(diaryService.create(diaryRequest));
     }
 
     /**
